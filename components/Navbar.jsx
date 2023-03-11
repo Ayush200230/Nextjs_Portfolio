@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { SiGmail } from "react-icons/si";
+import ThemeToggle from "@/components/Themetoggle";
 
 const Navbar = () => {
   const onButtonClick = () => {
@@ -41,14 +42,19 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? "fixed bg-[#ecf0f3] dark:bg-gray-900 w-full h-20 shadow-xl dark:shadow-neutral-500 z-[100]"
+          ? "fixed bg-[#ecf0f3] dark:bg-gray-900 w-full h-20 shadow-xl dark:shadow-gray-800 z-[100]"
           : "fixed bg-[#ecf0f3] dark:bg-gray-900 w-full h-20 z-[100]"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 ">
         <Link href="/">
           <Image
-            className="dark:rounded-full dark:shadow-lg dark:shadow-gray-400"
+            className={
+              nav
+                ? "hidden"
+                : "dark:rounded-full dark:shadow-lg dark:shadow-gray-800"
+            }
+            /*className={"dark:rounded-full dark:shadow-lg dark:shadow-gray-400"}*/
             src="/assets/favicon.ico"
             alt="/"
             width="70"
@@ -59,18 +65,19 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex dark:text-gray-50">
             <li>
-              <button
+              {/*<button
                 aria-label="Toggle Dark Mode"
                 className="ml-10 text-sm p-1 uppercase hover:border-b text-gray-100"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                click me
-              </button>
+                Mode
+              </button>*/}
+              <ThemeToggle />
             </li>
             <li>
               <button
                 onClick={onButtonClick}
-                className="ml-10 text-sm p-1 uppercase hover:border-b text-gray-100"
+                className="ml-10 text-sm p-1 uppercase hover:border-b border-b-black border-opacity-5 border-b-2 text-gray-100"
               >
                 Resume
               </button>
@@ -90,7 +97,7 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
-            <Link href="/#certificate">
+            <Link href="/certificate">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Certificate
               </li>
@@ -109,14 +116,14 @@ const Navbar = () => {
 
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? "md:hidden fixed right-0 top-0 w-full h-screen bg-black/70" : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              ? "fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] dark:bg-gray-900 p-10 ease-in duration-500"
+              : "fixed right-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
           <div>
@@ -124,6 +131,7 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   onClick={() => setNav(false)}
+                  className="dark:rounded-full dark:shadow-lg dark:shadow-gray-800"
                   src="/assets/favicon.ico"
                   width="87"
                   height="35"
@@ -132,29 +140,34 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handleNav}
-                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                className="rounded-full shadow-lg dark:shadow-gray-800 p-3 cursor-pointer dark:text-gray-50"
               >
                 <AiOutlineClose />
               </div>
             </div>
             <div className="flex border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">Ayush's Portfolio</p>
+              <p className="w-[85%] md:w-[90%] py-4 dark:text-gray-50">
+                Ayush's Portfolio
+              </p>
               <ul className="flex">
                 <li>
-                  <button
+                  {/*<button
                     aria-label="Toggle Dark Mode"
-                    className=" text-sm p-1 hover:border-b"
+                    className="mt-4 text-sm p-1 hover:border-b"
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    click me
-                  </button>
+                    Mode
+                  </button>*/}
+                  <div className="mt-3 ">
+                    <ThemeToggle />
+                  </div>
                 </li>
                 <li className="py-4">
                   <button
                     onClick={onButtonClick}
-                    className="ml-10 text-sm p-1 hover:border-b"
+                    className="ml-2 text-sm p-1 hover:border-b"
                   >
                     Resume
                   </button>
@@ -163,7 +176,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
+            <ul className="uppercase dark:text-gray-50">
               <Link href="/">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
@@ -196,23 +209,37 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="pt-20">
-              <p className="uppercase tracking-widest text-[#5651e5]">
+              <p className="uppercase tracking-widest text-[#4a4ada]">
                 Coding Time
               </p>
-              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaLinkedinIn />
+              <div className="flex items-center justify-between my-4 w-full sm:w-[80%] dark:text-gray-50">
+                <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <a
+                    href="https://www.linkedin.com/in/ayush-garg-b4a407228"
+                    target="_blank"
+                    alt="/"
+                  >
+                    <FaLinkedinIn />
+                  </a>
                 </div>
 
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaGithub />
+                <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <a
+                    href="https://github.com/Ayush200230"
+                    target="_blank"
+                    alt="/"
+                  >
+                    <FaGithub />
+                  </a>
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
+                <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <a href="mailto:humbleayush30@gmail.com">
+                    <SiGmail />
+                  </a>
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                {/*<div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <BsFillPersonLinesFill />
-                </div>
+                  </div>*/}
               </div>
             </div>
           </div>

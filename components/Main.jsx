@@ -1,7 +1,6 @@
 import React from "react";
-import { AiOutlineMail } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Main = () => {
   return (
@@ -18,28 +17,39 @@ const Main = () => {
           <h1 className="py-2 text-gray-700 dark:text-gray-100">
             A Front-end Web Developer
           </h1>
-          <p className="py-4 text-gray-600 dark:text-gray-100 sm:max-w-[70%] m-auto">
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit..." "There is no one who loves pain
-            itself, who seeks after it and wants to have it, simply because it
-            is pain..."
+          <p className="py-4 text-gray-600 dark:text-gray-400 sm:max-w-[70%] m-auto">
+            “If there’s one thing you learn by working on a lot of different Web
+            sites, it’s that almost any design idea–no matter how appallingly
+            bad–can be made usable in the right circumstances, with enough
+            effort.”
           </p>
-          <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
+          <p className="py-4 text-gray-600 dark:text-gray-400 sm:max-w-[70%] m-auto">
             "A New Generation Emerges from this point"
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4 dark:text-white">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaLinkedinIn />
+            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <a
+                href="https://www.linkedin.com/in/ayush-garg-b4a407228"
+                target="_blank"
+                alt="/"
+              >
+                <FaLinkedinIn />
+              </a>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaGithub />
+            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <a href="https://github.com/Ayush200230" target="_blank" alt="/">
+                <FaGithub />
+              </a>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail />
+
+            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-800 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <a href="mailto:humbleayush30@gmail.com">
+                <SiGmail />
+              </a>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            {/*<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <BsFillPersonLinesFill />
-            </div>
+  </div>*/}
           </div>
         </div>
       </div>

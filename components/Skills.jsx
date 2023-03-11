@@ -11,13 +11,13 @@ const Skills = () => {
         <h2 className="py-4">What I can Do</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {/*HTML*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/html.png"
-                  width="70"
-                  height="64"
+                  src="/assets/skills/html3d.png"
+                  width="110"
+                  height="1"
                   alt="/"
                 />
               </div>
@@ -28,13 +28,13 @@ const Skills = () => {
           </div>
 
           {/*CSS*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/css-alt.png"
-                  width="70"
-                  height="64"
+                  src="/assets/skills/css3d.png"
+                  width="110"
+                  height="1"
                   alt="/"
                 />
               </div>
@@ -44,13 +44,13 @@ const Skills = () => {
             </div>
           </div>
           {/*Javascript*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/javascript.png"
-                  width="70"
-                  height="64"
+                  src="/assets/skills/javascript3d.png"
+                  width="110"
+                  height="1"
                   alt="/"
                 />
               </div>
@@ -60,13 +60,14 @@ const Skills = () => {
             </div>
           </div>
           {/*Next.JS*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/nextjs.png"
-                  width="80"
-                  height="64"
+                  className="rounded-full"
+                  src="/assets/skills/nextjs3d.png"
+                  width="110"
+                  height="1"
                   alt="/"
                 />
               </div>
@@ -76,13 +77,14 @@ const Skills = () => {
             </div>
           </div>
           {/*Tailwind*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/tailwind.png"
-                  width="75"
-                  height="64"
+                  className="rounded-full h-24"
+                  src="/assets/skills/tailwind3d.png"
+                  width="110"
+                  height="1"
                   alt="/"
                 />
               </div>
@@ -92,18 +94,84 @@ const Skills = () => {
             </div>
           </div>
           {/*Github*/}
-          <div className="p-6 shadow-xl dark:shadow-neutral-500 rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/assets/skills/github.png"
-                  width="100"
-                  height="64"
+                  src="/assets/skills/github3d.png"
+                  width="120"
+                  height="1"
                   alt="/"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Github</h3>
+              </div>
+            </div>
+          </div>
+          {/* C */}
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                  className="rounded-full "
+                  src="/assets/skills/c.png"
+                  width="110"
+                  height="1"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>C</h3>
+              </div>
+            </div>
+          </div>
+          {/* C++ */}
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                  src="/assets/skills/c++3d.png"
+                  width="110"
+                  height="1"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>C++</h3>
+              </div>
+            </div>
+          </div>
+          {/* Python */}
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                  src="/assets/skills/python3d.png"
+                  width="110"
+                  height="1"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Python</h3>
+              </div>
+            </div>
+          </div>
+          {/* SQL */}
+          <div className="p-6 shadow-xl dark:shadow-gray-800 rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                  className="rounded-full"
+                  src="/assets/skills/SQL.png"
+                  width="110"
+                  height="1"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>SQL</h3>
               </div>
             </div>
           </div>

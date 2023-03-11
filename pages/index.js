@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Particle from "@/components/Particle";
-import Certificate from "@/components/Certificate";
 
 export default function Home() {
   return (
@@ -18,12 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Particle />
-      <Navbar />
+
       <Main />
       <About />
       <Skills />
       <Projects />
-      <Certificate />
       <Contact />
     </div>
   );
